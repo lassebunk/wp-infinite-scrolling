@@ -18,6 +18,10 @@ You adjust a set of CSS selectors, enabling WP Infinite Scrolling to integrate i
 your site without touching any code. Check the screenshots to see how selectors
 are defined.
 
+See a 4-minute screencast of how it works:
+
+https://www.youtube.com/watch?v=JHt86M-XF84
+
 ## Installation
 
 1. Download the plugin to `wp-content/plugins`.
