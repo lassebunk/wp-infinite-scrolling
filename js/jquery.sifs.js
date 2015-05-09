@@ -29,9 +29,10 @@
     nearBottom: function() {
       var scrollTop = $(window).scrollTop(),
           windowHeight = $(window).height(),
-          lastPostTop = $($.sifs.containerSelector).find($.sifs.postSelector).last().offset().top;
+          lastPostOffset = $($.sifs.containerSelector).find($.sifs.postSelector).last().offset();
 
-      return (scrollTop > (lastPostTop - windowHeight));
+      if (!lastPostOffset) return;
+      return (scrollTop > (lastPostOffset.top - windowHeight));
     },
 
     shouldLoadNextPage: function() {
