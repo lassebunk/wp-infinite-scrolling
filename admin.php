@@ -5,13 +5,13 @@ add_filter( 'plugin_action_links_' . wpifs_plugin_basename(), 'wpifs_plugin_acti
 
 function wpifs_plugin_action_links ( $links ) {
   $mylinks = array(
-    '<a href="' . admin_url( 'options-general.php?page=wp-infinite-scroll' ) . '">Settings</a>',
+    '<a href="' . admin_url( 'options-general.php?page=wp-infinite-scrolling' ) . '">Settings</a>',
   );
   return array_merge( $links, $mylinks );
 }
 
 function wpifs_add_admin_menu() {
-  add_options_page( 'Infinite scrolling', 'Infinite scrolling', 'manage_options', 'wp-infinite-scroll', 'wpifs_options_page' );
+  add_options_page( 'Infinite scrolling', 'Infinite scrolling', 'manage_options', 'wp-infinite-scrolling', 'wpifs_options_page' );
 }
 
 function wpifs_settings_init() {
@@ -136,7 +136,7 @@ function wpifs_options_page() {
   ?>
   <form action='options.php' method='post'>
    
-    <h2>WP Infinite Scroll</h2>
+    <h2>WP Infinite Scrolling</h2>
 
     <p>
       Here you can adjust settings for infinite scrolling on your blog.

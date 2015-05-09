@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: WP Infinite Scroll
- * Plugin URI: https://github.com/lassebunk/wp-infinite-scroll
+ * Plugin Name: WP Infinite Scrolling
+ * Plugin URI: https://github.com/lassebunk/wp-infinite-scrolling
  * Description: Enable infinite scrolling on your WordPress blog.
  * Version: 0.0.1
  * Author: Lasse Bunk
