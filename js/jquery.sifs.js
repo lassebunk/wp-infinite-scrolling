@@ -5,6 +5,7 @@
     paginationSelector: '.sifs-pagination',
     nextSelector:       'a.sifs-next',
     loadingHtml:        'Loading...',
+    show:               function(elems) { elems.show(); },
     nextPageUrl:        null,
 
     init: function(options) {
@@ -45,7 +46,7 @@
         var dom = $(html),
             posts = dom.find($.sifs.containerSelector).find($.sifs.postSelector);
         $('.wpifs-loading').remove();
-        posts.hide().appendTo($.sifs.containerSelector).fadeIn(700);
+        $.sifs.show(posts.hide().appendTo($.sifs.containerSelector));
         $.sifs.extractNextPageUrl(dom);
         $.sifs.scroll();
       });
