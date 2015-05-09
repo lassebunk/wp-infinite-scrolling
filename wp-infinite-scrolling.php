@@ -29,6 +29,7 @@ function wpifs_plugin_basename() {
 }
 
 function wpifs_add_scripts() {
+  wp_register_script( 'jquery.sifs', plugins_url( 'js/jquery.sifs.js', __FILE__ ) );
   wp_register_script( 'wpifs', plugins_url( 'js/wpifs.js', __FILE__ ) );
   wp_localize_script(
     'wpifs', 'wpifs_options',
@@ -40,6 +41,7 @@ function wpifs_add_scripts() {
       'loading'    => wpifs_option( 'loading_html' )
     )
   );
+  wp_enqueue_script( 'jquery.sifs' );
   wp_enqueue_script( 'wpifs' );
 }
 
