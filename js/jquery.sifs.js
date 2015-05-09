@@ -34,7 +34,7 @@
     },
 
     shouldLoadNextPage: function() {
-      return (!!$.sifs.nextPageUrl);
+      return !!$.sifs.nextPageUrl;
     },
     
     loadNextPage: function() {
