@@ -29,8 +29,8 @@ function wpifs_plugin_basename() {
 }
 
 function wpifs_add_scripts() {
-  wp_register_script( 'jquery.sifs', plugins_url( 'js/jquery.sifs.js', __FILE__ ) );
-  wp_register_script( 'wpifs', plugins_url( 'js/wpifs.js', __FILE__ ) );
+  wp_register_script( 'jquery.sifs', plugins_url( 'js/jquery.sifs.js', __FILE__ ), array( 'jquery' ) );
+  wp_register_script( 'wpifs', plugins_url( 'js/wpifs.js', __FILE__ ), array( 'jquery.sifs' ) );
   wp_localize_script(
     'wpifs', 'wpifs_options',
     array(
