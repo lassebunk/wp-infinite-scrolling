@@ -40,13 +40,14 @@
     },
     
     loadNextPage: function() {
-      var nextPageUrl = $.sifs.nextPageUrl;
+      var nextPageUrl = $.sifs.nextPageUrl,
+          loading = $($.sifs.loadingHtml);
       $.sifs.nextPageUrl = null;
-      $($.sifs.containerSelector).append('<div class="wpifs-loading">' + $.sifs.loadingHtml + '</div>');
+      loading.appendTo($.sifs.containerSelector);
       $.get(nextPageUrl, function(html) {
         var dom = $(html),
             posts = dom.find($.sifs.containerSelector).find($.sifs.postSelector);
-        $('.wpifs-loading').remove();
+        loading.remove();
         $.sifs.show(posts.hide().appendTo($.sifs.containerSelector));
         $.sifs.extractNextPageUrl(dom);
         $.sifs.scroll();

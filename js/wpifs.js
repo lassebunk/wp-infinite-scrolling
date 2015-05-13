@@ -4,7 +4,7 @@
     postSelector:       wpifs_options['post'],
     paginationSelector: wpifs_options['pagination'],
     nextSelector:       wpifs_options['next'],
-    loadingHtml:        wpifs_options['loading'],
+    loadingHtml:        '<div class="wpifs-loading">' + wpifs_options['loading'] + '</div>',
     show:               function(elems) {
                           elems.fadeIn(700);
                         }
